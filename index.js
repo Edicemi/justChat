@@ -1,3 +1,4 @@
+require('./lib/db');
 const express = require('express');
 const http = require('http');
 const path = require('path');
@@ -59,4 +60,7 @@ const user = getUser(socket.id);
 //server
 server.listen(process.env.PORT, _ => { 
     console.log(`Engine started on PORT: ${process.env.PORT}`);
+});
+if (err => {
+    console.log(`Error connecting to MongoDB: ${ err }`);
 });
